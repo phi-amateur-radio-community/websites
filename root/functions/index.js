@@ -1,6 +1,6 @@
 export async function onRequest(content) {
     const { request } = content;
-    const url = new URL(request.URL);
+    const url = new URL(request.url);
     if (url.pathname == '/') {
         const supported = new Set(['en-US', 'zh-CN', 'zh-TW']);
 
@@ -12,7 +12,7 @@ export async function onRequest(content) {
         const acceptLangHeader = request.headers.get('accept-language') || '';
         const langs = acceptLangHeader.split(',').map(l => l.split(';')[0].trim());
 
-        let target = '/en-US/';
+        let target = 'en-US';
         for(const l of langs) {
             if (supported.has(l)) {
                 target = `/${l}/`;
@@ -24,5 +24,5 @@ export async function onRequest(content) {
         response.headers.set('Set-Cookie', `lang=${target.slice(1,-1)}; path=/; max-age=31536000`);
         return response;
     }
-    return request.next();
+    return fetch(request);
 }
