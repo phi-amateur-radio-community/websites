@@ -1,10 +1,10 @@
 export async function onRequest(content) {
-    const { requeset } = content;
-    const url = new URL(requeset.URL);
+    const { request } = content;
+    const url = new URL(request.URL);
     if (url.pathname == '/') {
         const supported = new Set(['en-US', 'zh-CN', 'zh-TW']);
 
-        const cookieLang = requeset.headers.get('cookie')?.match(/lang=(\w+)/)?.[1];
+        const cookieLang = request.headers.get('cookie')?.match(/lang=(\w+)/)?.[1];
         if (cookieLang && supported.has(cookieLang)) {
             return Response.redirect(new URL(`/${cookieLang}/`, url), 302);
         }
@@ -22,7 +22,7 @@ export async function onRequest(content) {
 
         const response = Response.redirect(new URL(`/${target}/`, url), 302);
         response.headers.set('Set-Cookie', `lang=${target.slice(1,-1)}; path=/; max-age=31536000`);
-        return requeset;
+        return response;
     }
-    return requeset.next();
+    return request.next();
 }
