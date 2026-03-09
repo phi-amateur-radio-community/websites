@@ -20,9 +20,13 @@ export async function onRequest(content) {
             }
         }
 
-        const response = Response.redirect(new URL(`/${target}/`, url), 302);
-        response.headers.set('Set-Cookie', `lang=${target.slice(1,-1)}; path=/; max-age=31536000`);
-        return response;
+        return new Response(null, {
+            status: 302,
+            headers: {
+                Location: `/${target}/`,
+                "Set-Cookie": `lang=${target}; path=/; max-age=2592000`
+            }
+        });
     }
-    return fetch(request);
+    return request.next();
 }
