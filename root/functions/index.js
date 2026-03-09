@@ -15,7 +15,7 @@ export async function onRequest(content) {
         let target = 'en-US';
         for(const l of langs) {
             if (supported.has(l)) {
-                target = `/${l}/`;
+                target = `${l}`;
                 break;
             }
         }
