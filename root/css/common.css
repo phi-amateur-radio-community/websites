@@ -63,7 +63,7 @@ header {
     border-left: 1px solid #0079ff;
 }
 
-.nav[aria-current] {
+.nav :not([aria-current="page"]) {
     border-bottom: 1px solid #0079ff;
 }
 
