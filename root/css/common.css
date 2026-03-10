@@ -2,6 +2,7 @@ header {
     position: sticky;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     height: 7vh;
     border-bottom: 1px solid #0079ff;
 }
@@ -22,6 +23,18 @@ header {
 .logo span {
     font-size: 2.5vh;
     font-weight: bold;
+}
+
+.lang {
+    height: 80%;
+}
+
+.lang select {
+    height: 100%;
+    background-color: #00000000;
+    border: none;
+    font-size: 1.5vh;
+    font-weight: lighter;
 }
 
 html, body {
