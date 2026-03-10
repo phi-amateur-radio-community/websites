@@ -37,6 +37,15 @@ header {
     font-weight: lighter;
 }
 
+.transparency {
+    opacity: 100%;
+    transition: opacity 0.4s ease;
+}
+
+.transparency.hidden {
+    opacity: 0%;
+}
+
 html, body {
     background-color: #fff;
 }
@@ -51,6 +60,6 @@ html, body {
     }
 
     .logo {
-    background-color: #00000050;
+        background-color: #00000050;
     }
 }
