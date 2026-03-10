@@ -1,7 +1,7 @@
 header {
     position: sticky;
     display: flex;
-    height: 14vh;
+    height: 10vh;
 }
 
 .menu {
@@ -9,6 +9,7 @@ header {
     align-items: center;
     justify-content: space-between;
     height: 7vh;
+    width: 100%;
     border-bottom: 1px solid #0079ff;
 }
 
@@ -40,6 +41,14 @@ header {
     border: none;
     font-size: 1.5vh;
     font-weight: lighter;
+}
+
+.nav {
+    height: 3vh;
+}
+
+.nav a {
+    font-size: 1vh;
 }
 
 .transparency {
