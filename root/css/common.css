@@ -1,6 +1,11 @@
 header {
     position: sticky;
     display: flex;
+    height: 14vh;
+}
+
+.menu {
+    display: flex;
     align-items: center;
     justify-content: space-between;
     height: 7vh;
@@ -39,7 +44,7 @@ header {
 
 .transparency {
     opacity: 100%;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.3s ease;
 }
 
 .transparency.hidden {
