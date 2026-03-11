@@ -11,7 +11,7 @@ header {
     justify-content: space-between;
     height: 7vh;
     width: 100%;
-    border-bottom: 1px solid #0079ff;
+    border-bottom: 2px solid #0079ff;
 }
 
 .logo {
@@ -47,6 +47,7 @@ header {
 .nav {
     display: flex;
     height: 100%;
+    transition: border 0.3s ease;
 
     a {
         flex: 1;
@@ -60,11 +61,11 @@ header {
 }
 
 .nav > *:not(:first-child) {
-    border-left: 1px solid #0079ff;
+    border-left: 2px solid #0079ff;
 }
 
 .nav :not([aria-current="page"]) {
-    border-bottom: 1px solid #0079ff;
+    border-bottom: 2px solid #0079ff;
 }
 
 .transparency {
