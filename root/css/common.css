@@ -19,15 +19,15 @@ header {
     padding: 0 10px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 
     img {
-        height: 90%;
+        height: 80%;
         width: auto;
     }
 
     span {
-        font-size: 3vh;
+        font-size: 2.2vh;
         font-weight: bold;
     }
 }
@@ -39,7 +39,7 @@ header {
         height: 100%;
         background-color: #00000000;
         border: none;
-        font-size: 2vh;
+        font-size: 1.8vh;
         font-weight: lighter;
     }
 }
