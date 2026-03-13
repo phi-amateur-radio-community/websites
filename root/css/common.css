@@ -60,14 +60,6 @@ header {
     }
 }
 
-.nav > *:not(:first-child) {
-    border-left: 2px solid #0079ff;
-}
-
-.nav :not([aria-current="page"]) {
-    border-bottom: 2px solid #0079ff;
-}
-
 .transparency {
     opacity: 100%;
     transition: opacity 0.3s ease;
@@ -89,6 +81,14 @@ html, body {
     color: #000;
 }
 
+.nav > *:not(:first-child) {
+    border-left: 2px solid #002FFF;
+}
+
+.nav :not([aria-current="page"]) {
+    border-bottom: 2px solid #002FFF;
+}
+
 @media (prefers-color-scheme: dark) {
     html, body {
         background-color: #000;
@@ -100,5 +100,13 @@ html, body {
 
     .text-color {
         color: #fff;
+    }
+
+    .nav > *:not(:first-child) {
+        border-left: 2px solid #00B6FF;
+    }
+
+    .nav :not([aria-current="page"]) {
+        border-bottom: 2px solid #00B6FF;
     }
 }
