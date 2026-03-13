@@ -117,3 +117,36 @@ html, body {
         border-bottom: 2px solid #00B6FF;
     }
 }
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none;
+        transition: none;
+    }
+}
+
+@media (prefers-contrast: more) {
+    html, body {
+        background-color: #fff;
+    }
+
+    .menu {
+        border-bottom: 2px solid #000F;
+    }
+
+    .logo {
+        background-color: #fff;
+    }
+
+    .text-color {
+        color: #000;
+    }
+
+    .nav > *:not(:first-child) {
+        border-left: 2px solid #000;
+    }
+
+    .nav :not([aria-current="page"]) {
+        border-bottom: 2px solid #000;
+    }
+}
