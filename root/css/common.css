@@ -117,6 +117,10 @@ html, body {
     color: #000;
 }
 
+.a-color {
+    color: #002FFF;
+}
+
 .nav > *:not(:first-child) {
     border-left: 2px solid #002FFF;
 }
@@ -145,6 +149,10 @@ html, body {
 
     .text-color {
         color: #fff;
+    }
+
+    .a-color {
+        color: #00B6FF;
     }
 
     .nav > *:not(:first-child) {
