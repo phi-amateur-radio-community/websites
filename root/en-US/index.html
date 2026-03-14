@@ -9,6 +9,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
         <meta name="description" content="Home page of Phi Amateur Radio Community">
+        <meta name="accessibility" content="WCAG 2.1 AAA">
         <link rel="canonical" href="https://www.phiarc.org/en-US/">
         <link rel="alternate" hreflang="x-default" href="https://www.phiarc.org/">
         <link rel="alternate" hreflang="en-US" href="https://www.phiarc.org/en-US/">
@@ -19,6 +20,8 @@
                 "@content": "schema.org",
                 "@type": "Organization",
                 "name": "Phiarc",
+                "accessibilityAPI": "ARIA",
+                "accessibilityControl": [],
                 "url": "https://www.phiarc.org/en-US",
                 "inLanguage": "en-US",
                 "logo": "https://www.phiarc.org/logo.svg",
@@ -44,7 +47,8 @@
                     <span>Phiarc</span>
                 </div>
                 <div class="lang">
-                    <select onchange="">
+                    <label for="language-select" class="visually-hidden">Select Language</label>
+                    <select id="language-select" onchange="">
                         <option value="en-US">English(United States)</option>
                         <option value="zh-CN">简体中文(中国大陆)</option>
                         <option value="zh-CN">繁體中文(中國臺灣)</option>
@@ -59,7 +63,9 @@
             </nav>
         </header>
         <main class="transparency">
-            <h1> Hello World </h1>
+            <section>
+                <h1></h1>
+            </section>
         </main>
     </body>
 </html>

@@ -1,8 +1,24 @@
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 header {
     position: sticky;
     display: flex;
     height: 80px;
     flex-direction: column;
+}
+
+main {
+    max-width: 70ch;
+}
+
+p {
+    line-height: 1.8;
+    margin-bottom: 2em;
 }
 
 .menu {
