@@ -5,6 +5,11 @@
     overflow: hidden;
 }
 
+p {
+    line-height: 1.8;
+    margin-bottom: 2em;
+}
+
 header {
     position: sticky;
     display: flex;
@@ -16,9 +21,19 @@ main {
     max-width: 70ch;
 }
 
-p {
-    line-height: 1.8;
-    margin-bottom: 2em;
+footer {
+    text-align: center;
+
+    p {
+        line-height: normal;
+        margin-bottom: 0.5em;
+    }
+
+    a {
+        font-size: 15px;
+        text-decoration: none;
+        padding: 10px;
+    }
 }
 
 .menu {
