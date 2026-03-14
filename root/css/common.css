@@ -177,7 +177,7 @@ html, body {
     }
 
     .menu {
-        border-bottom: 2px solid #000F;
+        border-bottom: 2px solid #000;
     }
 
     .logo {
@@ -188,7 +188,7 @@ html, body {
         }
     }
 
-    .text-color {
+    .text-color, .a-color {
         color: #000;
     }
 
@@ -198,5 +198,35 @@ html, body {
 
     .nav :not([aria-current="page"]) {
         border-bottom: 2px solid #000;
+    }
+}
+
+@media (prefers-contrast: more) and (prefers-color-scheme: dark), (forced-colors: active) and (prefers-color-scheme: dark)  {
+    html, body {
+        background-color: #000;
+    }
+
+    .menu {
+        border-bottom: 2px solid #fff;
+    }
+
+    .logo {
+        background-color: #000;
+
+        img {
+            filter: grayscale(100%) invert(100%);
+        }
+    }
+
+    .text-color, .a-color {
+        color: #fff;
+    }
+
+    .nav > *:not(:first-child) {
+        border-left: 2px solid #fff;
+    }
+
+    .nav :not([aria-current="page"]) {
+        border-bottom: 2px solid #fff;
     }
 }
