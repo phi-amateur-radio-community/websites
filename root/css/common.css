@@ -23,6 +23,7 @@ main {
 
 footer {
     text-align: center;
+    padding-top: 10px;
 
     p {
         line-height: normal;
@@ -66,7 +67,7 @@ footer {
 .lang {
     height: 80%;
 
-    select {
+    select, button {
         height: 100%;
         background-color: #00000000;
         border: none;
