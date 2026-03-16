@@ -67,6 +67,7 @@ footer {
 
 .lang {
     height: 80%;
+    padding: 0 10px;
 
     select, button {
         height: 100%;
