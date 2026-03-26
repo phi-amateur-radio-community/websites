@@ -2,6 +2,14 @@ export async function onRequest(content) {
     const { request } = content;
     const url = new URL(request.url);
     if (url.pathname == '/') {
+
+        const ua = request.headers.get("User-Agent")?.toLowerCase() || "";
+        const isBot = ua.includes("bot");
+
+        if (isBot) {
+            return await fetch(`%{url.origin}/index.html`);
+        }
+
         const supported = new Set(['en-US', 'zh-CN', 'zh-TW']);
 
         const cookieLang = request.headers.get('cookie')?.match(/lang=(\w+)/)?.[1];
